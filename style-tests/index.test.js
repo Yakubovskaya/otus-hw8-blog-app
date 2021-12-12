@@ -12,6 +12,7 @@ describe("styles.test", () => {
     { width: 1920, height: 1080 },
     { width: 600, height: 1080 },
   ].forEach(({ width, height }) =>
+    // eslint-disable-next-line max-len
     it(`should have proper view for ${width}x${height} params`, async () => {
       // setting up puppeteer
       const browser = await puppeteer.launch();
