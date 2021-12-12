@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const path = require("path");
 
 const { NODE_ENV } = process.env;
@@ -51,6 +52,16 @@ module.exports = {
       template: path.resolve(__dirname, "index.html"),
     }),
     new MiniCssExtractPlugin(),
+    new BrowserSyncPlugin(
+      {
+        host: "localhost",
+        port: 3000,
+        proxy: "http://localhost:9000/",
+      },
+      {
+        reload: false,
+      }
+    ),
   ],
   optimization: {
     minimizer: [`...`, new CssMinimizerPlugin()],
