@@ -1,9 +1,13 @@
-/**
- * html5doctor.com 
-Reset Stylesheet v1.6.1 
- * Richard Clark 
- * http://cssreset.com
- */
+/* https://gist.github.com/marharyta/09334b624abac5b46661b67566361c0d */
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
 html,
 body,
 div,
@@ -109,10 +113,10 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: "";
   content: none;
 }
@@ -160,7 +164,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
 }

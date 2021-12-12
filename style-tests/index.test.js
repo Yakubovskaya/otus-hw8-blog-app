@@ -3,6 +3,11 @@ import { toMatchImageSnapshot } from "jest-image-snapshot";
 
 expect.extend({ toMatchImageSnapshot });
 
+const sleep = async (x) =>
+  new Promise((resolve) => {
+    setTimeout(resolve, x);
+  });
+
 describe("styles.test", () => {
   beforeEach(() => {
     jest.setTimeout(10000);
@@ -24,6 +29,7 @@ describe("styles.test", () => {
       await page.goto("http://localhost:9000", {
         waitUntil: "networkidle0",
       });
+      await sleep(3000);
 
       const image = await page.screenshot();
       await browser.close();
