@@ -28,6 +28,14 @@ describe("styles.test", () => {
       await browser.close();
 
       expect(image).toMatchImageSnapshot();
+      expect(image).toMatchImageSnapshot(
+        process.env.CI
+          ? {
+              failureThreshold: 0.005,
+              failureThresholdType: "percent",
+            }
+          : undefined
+      );
     })
   );
 });
