@@ -1,8 +1,12 @@
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
-const path = require("path");
+
+const glob = require("glob");
+
+const pages = glob.sync("pages/*.html");
 
 const { NODE_ENV } = process.env;
 
@@ -48,9 +52,13 @@ module.exports = {
   },
   mode: NODE_ENV === "production" ? "production" : "development",
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "index.html"),
-    }),
+    ...pages.map(
+      (el) =>
+        new HtmlWebpackPlugin({
+          filename: el.replace(/^pages\//, ""),
+          template: el,
+        })
+    ),
     new MiniCssExtractPlugin(),
     new BrowserSyncPlugin(
       {
