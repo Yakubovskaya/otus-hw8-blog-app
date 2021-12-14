@@ -11,10 +11,15 @@ const pages = glob.sync("pages/*.html");
 const { NODE_ENV } = process.env;
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/index.js"),
+  entry: {
+    index: "./src/page-types/index.js",
+    listPage: "./src/page-types/listPage.js",
+    pageOfNote: "./src/page-types/pageOfNote.js",
+    feedBackPage: "./src/page-types/feedBackPage.js",
+  },
   output: {
-    filename: "bundle.js",
-    path: path.join(__dirname, "/dist"),
+    filename: "js/[name].js",
+    path: path.resolve(__dirname, "dist"),
     clean: true,
     environment: {
       arrowFunction: false,
@@ -34,8 +39,13 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+        test: /\.(scss|css)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg)$/i,
@@ -51,15 +61,23 @@ module.exports = {
     ],
   },
   mode: NODE_ENV === "production" ? "production" : "development",
+
   plugins: [
-    ...pages.map(
-      (el) =>
-        new HtmlWebpackPlugin({
-          filename: el.replace(/^pages\//, ""),
-          template: el,
-        })
-    ),
-    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: "index.html",
+      chunks: ["index"],
+    }),
+    ...pages.map((el) => {
+      const file = el.match(/(\w+)(?=\.html)/im);
+      return new HtmlWebpackPlugin({
+        filename: el,
+        template: el,
+        chunks: file,
+      });
+    }),
+    new MiniCssExtractPlugin({
+      filename: "css/[name].css",
+    }),
     new BrowserSyncPlugin(
       {
         host: "localhost",
