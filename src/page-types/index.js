@@ -1,1 +1,1 @@
-import "../styles/sass/mainPage/style.scss";
+import "../sass/mainPage-style.scss";

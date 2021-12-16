@@ -6,7 +6,7 @@ const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 const glob = require("glob");
 
-const pages = glob.sync("pages/*.html");
+const pages = glob.sync("./src/pages/*.html");
 
 const { NODE_ENV } = process.env;
 
@@ -51,7 +51,14 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg)$/i,
         type: "asset/resource",
         generator: {
-          filename: "./image/[contenthash][ext]",
+          filename: "assets/image/[contenthash][ext]",
+        },
+      },
+      {
+        test: /\.(woff|woff2)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/fonts/[contenthash].[ext]",
         },
       },
       {
@@ -64,13 +71,13 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      template: "./src/index.html",
       chunks: ["index"],
     }),
     ...pages.map((el) => {
       const file = el.match(/(\w+)(?=\.html)/im);
       return new HtmlWebpackPlugin({
-        filename: el,
+        filename: el.replace(/^.\/src\//, ""),
         template: el,
         chunks: file,
       });
