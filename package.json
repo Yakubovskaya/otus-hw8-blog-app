@@ -23,8 +23,7 @@
   "homepage": "https://github.com/Yakubovskaya/otus-hw8-blog-app#readme",
   "dependencies": {
     "mrm": "^3.0.10",
-    "postcss": "^8.4.5",
-    "stylelint-scss": "^4.0.1"
+    "postcss": "^8.4.5"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
