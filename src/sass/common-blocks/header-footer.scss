@@ -1,7 +1,21 @@
-.header {
-  padding: 12px 0;
+.header,
+.footer {
+  position: fixed;
+  left: 0;
   width: 100%;
+  z-index: 2;
+  padding: 15px 0;
+  background-color: #fff;
+}
+
+.header {
+  top: 0;
   border-bottom: 1px solid #a8a8a8;
+}
+
+.footer {
+  bottom: 0;
+  border-top: 1px solid #a8a8a8;
 }
 
 .menu {
@@ -36,6 +50,7 @@
   width: 430px;
 
   &__item {
+    font-size: 20px;
     color: black;
   }
 }

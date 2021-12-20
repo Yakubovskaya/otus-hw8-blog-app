@@ -4,8 +4,98 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Обратная связь</title>
   </head>
 
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="menu">
+          <a href="#" class="menu__logo">My blog</a>
+          <nav class="nav menu__nav">
+            <a href="../index.html" class="nav__item">Главная</a>
+            <a href="./listPage.html" class="nav__item">Список записей</a>
+            <a href="#" class="nav__item">Обратная связь</a>
+          </nav>
+          <div class="menu__social">
+            <a href="#"
+              ><img src="../assets/image/facebook.svg" alt="facebook"
+            /></a>
+            <a href="#"
+              ><img src="../assets/image/github.svg" alt="github"
+            /></a>
+            <a href="#"
+              ><img src="../assets/image/telegram.svg" alt="telegram"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="main">
+        <div class="container">
+          <h1 class="title">Contact me</h1>
+          <div class="feedback__wrapper">
+            <form action="#" method="#" class="feedback__form">
+              <div class="feedback__input-group">
+                <label for="user-name" class="form__label">Имя</label>
+                <input
+                  type="text"
+                  name="userName"
+                  class="form__input"
+                  id="user-name"
+                  placeholder="Как вас зовут:"
+                />
+              </div>
+              <div class="feedback__input-group">
+                <label for="user-phone" class="form__label">Телефон</label>
+                <input
+                  type="tel"
+                  name="userPhone"
+                  class="form__input"
+                  id="user-phone"
+                  placeholder="Ваш номер телефона:"
+                />
+              </div>
+              <div
+                class="feedback__input-group feedback__input-group_full-width"
+              >
+                <label for="user-question" class="form__label">Сообщение</label>
+                <input
+                  type="text"
+                  name="userQuestion"
+                  class="form__input"
+                  id="user-question"
+                  placeholder="Ваше сообщение:"
+                />
+              </div>
+              <button class="feedback__button">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="menu">
+          <nav class="nav menu__nav">
+            <a href="../index.html" class="nav__item">Главная</a>
+            <a href="./listPage.html" class="nav__item">Список записей</a>
+            <a href="#" class="nav__item">Обратная связь</a>
+          </nav>
+          <div class="menu__social">
+            <a href="#"
+              ><img src="../assets/image/facebook.svg" alt="facebook"
+            /></a>
+            <a href="#"
+              ><img src="../assets/image/github.svg" alt="github"
+            /></a>
+            <a href="#"
+              ><img src="../assets/image/telegram.svg" alt="telegram"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

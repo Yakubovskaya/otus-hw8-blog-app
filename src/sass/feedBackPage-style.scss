@@ -1,0 +1,60 @@
+@import "./base/sanitize";
+@import "./base/html5doctor";
+@import "./base/fonts";
+@import "./base/settings";
+@import "./common-blocks/header-footer";
+
+.feedback {
+  &__wrapper {
+    max-width: 670px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 60px;
+    background-color: #181818;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 45%;
+    margin-bottom: 30px;
+
+    &_full-width {
+      flex-basis: 100%;
+    }
+  }
+
+  &__button {
+    margin: auto;
+    padding: 12px;
+  }
+}
+
+.form {
+  &__label {
+    color: rgb(255 255 255 / 50%);
+    font-size: 15px;
+  }
+
+  &__input {
+    margin-top: 7px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(54 54 54 / 80%);
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 0;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}
