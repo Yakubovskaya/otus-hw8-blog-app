@@ -1,5 +1,9 @@
 @import "./base/sanitize";
 @import "./base/html5doctor";
+@import "./base/fonts";
+@import "./base/settings";
+@import "./common-blocks/header-footer";
+@import "./common-blocks/media-common.scss";
 @import "./media/mainPage-media";
 
 .promo {

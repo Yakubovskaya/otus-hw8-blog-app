@@ -1,5 +1,4 @@
 {
-  
   "rules": {
       "block-no-empty": true,
       "color-no-invalid-hex": true,
@@ -17,7 +16,13 @@
       "selector-list-comma-space-before": "never",
       "selector-list-comma-newline-after": "always",
       "string-quotes": "double",
-      "value-no-vendor-prefix": true
+      "value-no-vendor-prefix": true,
+      "declaration-block-no-duplicate-properties": [
+        true,
+        {
+          "ignore": ["consecutive-duplicates", "consecutive-duplicates-with-different-values"]
+        }
+      ]
   },
   "overrides": [
     {

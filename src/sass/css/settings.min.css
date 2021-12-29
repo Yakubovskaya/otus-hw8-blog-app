@@ -1,0 +1,27 @@
+html {
+  font-family: CormorantGaramond, sans-serif;
+}
+a,
+a:active {
+  text-decoration: none;
+  color: #000;
+}
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+.main {
+  padding: 85px 0;
+}
+.title {
+  font-family: Corinthia, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  line-height: 40px;
+}
+.data {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+}
+/*# sourceMappingURL=settings.min.css.map */

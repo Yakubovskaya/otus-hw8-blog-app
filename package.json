@@ -9,7 +9,7 @@
     "lint:fix": "eslint . --fix && stylelint \"**/*.scss\" --fix",
     "prepare": "husky install",
     "build": "webpack build --node-env production",
-    "dev": "webpack serve --open"
+    "dev": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",
