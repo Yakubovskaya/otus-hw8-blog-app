@@ -1,0 +1,60 @@
+.header,
+.footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 15px 0;
+  background-color: #fff;
+}
+
+.header {
+  top: 0;
+  border-bottom: 1px solid #a8a8a8;
+}
+
+.footer {
+  bottom: 0;
+  border-top: 1px solid #a8a8a8;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    width: 75px;
+    font-family: Corinthia, sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 430px;
+
+  &__item {
+    font-size: 20px;
+    color: black;
+  }
+}
+
+.hamburger {
+  display: none;
+}
