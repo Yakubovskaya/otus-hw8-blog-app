@@ -80,12 +80,14 @@ html {
   tab-size: 4;
 
   /* 4 */
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
   tab-size: 4;
 
   /* 4 */
   text-size-adjust: 100%;
 
   /* 5 */
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
   text-size-adjust: 100%;
 
   /* 5 */
@@ -569,15 +571,12 @@ dialog {
   color: black;
   display: block;
   height: fit-content;
-  height: fit-content;
-  height: fit-content;
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
   left: 0;
   margin: auto;
   padding: 1em;
   position: absolute;
   right: 0;
-  width: fit-content;
-  width: fit-content;
   width: fit-content;
 }
 
@@ -630,9 +629,6 @@ select,
 summary,
 textarea,
 [tabindex] {
-  touch-action: manipulation;
-
-  /* 1 */
   touch-action: manipulation;
 
   /* 2 */
