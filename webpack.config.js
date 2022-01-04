@@ -16,6 +16,7 @@ module.exports = {
     listPage: "./src/page-types/listPage.js",
     pageOfNote: "./src/page-types/pageOfNote.js",
     feedBackPage: "./src/page-types/feedBackPage.js",
+    common: "./src/page-types/common.js",
   },
   output: {
     filename: "js/[name].js",
@@ -72,7 +73,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      chunks: ["index"],
+      chunks: ["index", "common"],
     }),
     ...pages.map((el) => {
       const file = el.match(/(\w+)(?=\.html)/im);
