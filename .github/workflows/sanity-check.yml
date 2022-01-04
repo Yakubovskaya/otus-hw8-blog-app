@@ -20,7 +20,7 @@ jobs:
       - name: Tests check
         run: |
           # https://www.maketecheasier.com/run-bash-commands-background-linux/
-          npm dev &>/dev/null &
+          npm run dev &>/dev/null &
           npm run test
 
       - name: Archive artifacts for style tests
