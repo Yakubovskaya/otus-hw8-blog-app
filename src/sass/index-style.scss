@@ -1,0 +1,55 @@
+@import "./base/sanitize";
+@import "./base/html5doctor";
+@import "./base/fonts";
+@import "./base/settings";
+@import "./common-blocks/header-footer";
+@import "./common-blocks/media-common.scss";
+@import "./media/index-media";
+
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  height: 100vh;
+  background: url("../assets/image/main_pic.jpg") no-repeat center / cover;
+  color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, .6);
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    max-width: 300px;
+    transform: translateY(-50%);
+  }
+
+  &__title {
+    font-size: 38px;
+    max-width: 504px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__button {
+    width: 130px;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 14px 0;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #fff;
+  }
+}
