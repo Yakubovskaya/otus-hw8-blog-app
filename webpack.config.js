@@ -14,8 +14,8 @@ module.exports = {
   entry: {
     index: "./src/page-types/index.js",
     carousel: "./src/page-types/carousel.js",
-    note: "./src/page-types/pageOfNote.js",
-    feedback: "./src/page-types/feedBackPage.js",
+    note: "./src/page-types/note.js",
+    feedback: "./src/page-types/feedback.js",
     common: "./src/page-types/common.js",
   },
   output: {
