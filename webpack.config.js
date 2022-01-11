@@ -13,9 +13,9 @@ const { NODE_ENV } = process.env;
 module.exports = {
   entry: {
     index: "./src/page-types/index.js",
-    listPage: "./src/page-types/listPage.js",
-    pageOfNote: "./src/page-types/pageOfNote.js",
-    feedBackPage: "./src/page-types/feedBackPage.js",
+    carousel: "./src/page-types/carousel.js",
+    note: "./src/page-types/pageOfNote.js",
+    feedback: "./src/page-types/feedBackPage.js",
     common: "./src/page-types/common.js",
   },
   output: {
